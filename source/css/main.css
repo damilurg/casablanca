@@ -68,10 +68,10 @@ nav .click {
 }
 
 nav ul {
-    width: 230px;
+    width: 170px;
     height: 0;
     position: absolute;
-    left: 0px;
+    left: 50px;
     top: 78px;
     background: rgba(255, 255, 255, 0.5);
     padding: 0;
@@ -99,7 +99,7 @@ nav a {
     display: inline-block;
     height: 100%;
     width: 100%;
-    padding: 5px 0 0 50px;
+    padding: 5px 0 0 30px;
     text-align: justify;
     text-decoration: none;
     color: #000;
@@ -316,6 +316,55 @@ section {
     height: 400px;
     margin: 10px 10px;
     transition: all 1s;
+    position: relative;
+    overflow: hidden;
+}
+
+.work-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 8px solid #000000;
+    opacity: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+.work:hover .work-info {
+    opacity: 1;
+}
+
+.work-info h3 {
+    font-size: 18px;
+    line-height: 60px;
+    color: #ffffff;
+    font-family: "Big John";
+    text-align: center;
+    margin: 50px 0 -25px;
+}
+
+.work-info a {
+    font-size: 24px;
+    line-height: 60px;
+    color: #ffffff;
+    font-family: "Amble";
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}
+
+.work-info a:hover {
+    color: #dedede;
+}
+
+.work-info hr {
+    width: 48px;
+    height: 2px;
+    background-color: #d87843;
+    margin-top: 15px;
 }
 
 .work:nth-child(1),
