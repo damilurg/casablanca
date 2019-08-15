@@ -155,9 +155,8 @@
             </div>
         </section>
         <section class="section video" id="video">
-            <a href="">
-
-            </a>
+            <a href="#"><img src="source/images/icons/play.png" alt="play me" onclick="videoPlay();return false;"></a>
+            <div id="video"></div>
         </section>
         <section id="why_choose">
             <div class="container">
@@ -254,36 +253,10 @@
             <span>2014 © <a href="#">Samir Timezguida.</a> All Rights Reserved.</span>
         </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="source/js/slick.min.js"></script>
     <script src="source/js/scripts.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.slider').slick({
-                infinite: true,
-                dots: true,
-                arrows: false,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                speed: 750,
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                responsive: [{
-                    breakpoint: 980,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                }, {
-                    breakpoint: 520,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                    }
-                }]
-            });
-        });
-    </script>
 </body>
 
 </html>
