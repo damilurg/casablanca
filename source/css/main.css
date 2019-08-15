@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Amble Regular';
+    font-family: 'Amble';
     src: url('../fonts/Amble-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -18,13 +18,9 @@
     font-style: normal;
 }
 
-:root {
-    --carousel-width: 960px;
-}
-
 body {
     margin: 0;
-    font-family: "Amble Regular", sans-serif;
+    font-family: "Amble", sans-serif;
 }
 
 a {
@@ -49,16 +45,18 @@ h1,
 h2,
 h3,
 h4 {
-    font-size: 2em;
     font-family: 'Big John', sans-serif;
     text-transform: uppercase;
-    margin: 0 0 35px;
     text-align: center;
 }
 
 h1 {
     padding: 0 10px;
     font-size: 3em;
+}
+
+h2 {
+    font-size: 30px;
 }
 
 nav .click {
@@ -149,20 +147,12 @@ header {
 
 .down_scroll .mouse {
     display: block;
-    width: 40px;
-    height: 60px;
-    border-radius: 20px;
-    background: white;
+    width: 30px;
+    height: 48px;
+    border-radius: 15px;
+    background-image: url('../images/icons/mouse-scroll.png');
     box-sizing: border-box;
     padding: 5px 0 0;
-}
-
-.down_scroll .mouse div {
-    width: 10px;
-    height: 20px;
-    border-radius: 10px;
-    background: #c88365;
-    margin: 0 auto;
 }
 
 .header-content {
@@ -196,10 +186,10 @@ header {
 
 section p {
     margin: 0 auto;
-    width: 805px;
+    width: 820px;
     font-size: 22px;
-    color: #5E5E5E;
-    font-family: 'amblelight';
+    color: #222222;
+    font-family: 'Amble';
     line-height: 36px;
 }
 
@@ -208,6 +198,7 @@ hr {
     width: 85px;
     margin: 70px auto;
     background-color: #222222;
+    border: none;
 }
 
 section {
@@ -216,9 +207,8 @@ section {
 }
 
 .section {
-    height: 500px;
+    height: 340px;
     box-sizing: border-box;
-    background-position: center center;
     background-blend-mode: darken;
     display: flex;
     justify-content: center;
@@ -235,7 +225,7 @@ section {
 }
 
 .creativity {
-    background: url("../images/creativity_bg_image.jpg") no-repeat center center/cover;
+    background: url("../images/creativity_bg_image.jpg") no-repeat center 55%/cover;
     filter: brightness(0.85);
 }
 
@@ -256,7 +246,7 @@ section {
 .section .btn {
     border-color: white;
     color: white;
-    width: 428px;
+    max-width: 430px;
     padding: 0;
     height: 100px;
     font-size: 2em;
@@ -354,22 +344,22 @@ section {
     justify-content: center;
 }
 
-.work>div>img {
+.work img {
     width: 100%;
     max-width: 370px;
     height: 100%;
 }
 
-#our_clients_page {
+#clients {
     background: #F4F4F4;
 }
 
 .clients_grid {
-    width: 100%;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-gap: 30px;
+    width: 100%;
 }
 
 .client {
@@ -392,18 +382,18 @@ section {
 .team {
     width: 100%;
     display: flex;
-    margin: 86px 0 0;
+    margin: 80px 0 25px;
     justify-content: space-between;
 }
 
-.member {
+.person {
     width: 270px;
     height: 360px;
     position: relative;
     overflow: hidden;
 }
 
-.member-info {
+.person-info {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -413,54 +403,63 @@ section {
     flex-flow: column;
     justify-content: flex-end;
     align-items: center;
-    background: rgba(0, 0, 0, 0.6);
-    border: 3px solid black;
+    background-color: rgba(34, 34, 34, 0.4);
+    border: 4px solid #000000;
     opacity: 0;
     color: white;
     box-sizing: border-box;
     padding: 10px;
-    text-transform: uppercase;
-    padding: 0 0 30px;
+    text-transform: capitalize;
 }
 
-.member-info h4 {
-    font-size: 1.5rem;
-    margin: 10px;
+.person-info h4 {
+    font-size: 24px;
+    line-height: 36px;
+    color: #ffffff;
+    font-family: "Big John";
+    text-align: center;
+    margin: 10px 0 0;
 }
 
-.member-info>a {
+.person-info span {
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 36px;
+    color: #ffffff;
+    font-family: "Amble";
+    font-weight: 700;
+    text-align: center;
+}
+
+.person-info>a {
     display: block;
     text-decoration: none;
-    border-radius: 100%;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     position: absolute;
     top: 15px;
     right: 15px;
-    border: 3px solid white;
     text-align: center;
     line-height: 28px;
+    background-image: url(../images/icons/link.png);
+    background-position: center center;
 }
 
-.member-info>a:hover {
-    color: orange;
-    border-color: orange;
-}
-
-.member>img {
+.person>img {
     transition: transform .6s;
+    height: 100%;
+    width: 100%;
 }
 
-.member:hover .member-info {
+.person:hover .person-info {
     opacity: 1;
 }
 
-.member hr {
-    width: 46px;
+.person hr {
     margin: 0;
 }
 
-.we-are-hiring {
+.hiring {
     border: 2px solid black;
     text-align: center;
     display: flex;
@@ -471,40 +470,20 @@ section {
     padding: 57px 30px;
 }
 
-.we-are-hiring h2 {
+.hiring h2 {
     font-size: 1.5em;
     line-height: 36px;
     margin: 32px 0 0;
 }
 
-.we-are-hiring .separator {
-    margin: 30px auto 0;
-}
-
-.we-are-hiring .btn {
-    width: 177px;
+.hiring .btn {
+    width: 183px;
     padding: 13px 0px;
-    margin: 32px auto 0;
-}
-
-.carousel {
-    width: var(--carousel-width);
-    overflow: hidden;
-    margin: 75px auto 0;
-}
-
-.carousel_slides {
-    width: 960px;
-    display: flex;
-    transition: transform 1s;
 }
 
 @media (max-width:768px) {
     nav button {
         left: 20px;
-    }
-    .carousel_slides {
-        width: 620px;
     }
 }
 
@@ -574,10 +553,6 @@ section {
     margin: 30px 0;
 }
 
-.slider .h3 {
-    margin: 32px 0 30px;
-}
-
 .slider .slider-item2 {
     -webkit-transform: translateY(33px);
     transform: translateY(33px);
@@ -601,13 +576,17 @@ section {
     color: #222222;
     font-size: 22px;
     line-height: 36px;
-    font-family: 'AmbleL', sans-serif;
+    font-family: 'Amble', sans-serif;
 }
 
 .choose .choose__block {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.magic {
+    margin-top: 5px;
 }
 
 .item {
@@ -645,35 +624,7 @@ section {
     text-transform: capitalize;
     font-size: 1.5em;
     margin: 30px 0;
-    font-family: "Amble Regular", sans-serif;
-}
-
-.carousel_controls {
-    margin: 30px 0 0;
-}
-
-.carousel_controls button {
-    width: 15px;
-    height: 15px;
-    padding: 0;
-    margin: 0 4px;
-    border-radius: 50%;
-    border: none;
-    background: rgb(200, 200, 200);
-    outline: none;
-}
-
-.carousel_controls button:hover {
-    background: rgb(195, 91, 22);
-    color: white;
-}
-
-.carousel_controls button:active {
-    background: rgb(195, 91, 22);
-}
-
-.carousel_controls button.active {
-    background: black;
+    font-family: "Amble", sans-serif;
 }
 
 .our-location {
@@ -704,7 +655,7 @@ section {
     flex-basis: 60%;
     background: #e4e4e4;
     box-sizing: border-box;
-    padding: 80px calc((100% - 1170px) / 2) 120px 100px;
+    padding: 105px calc((100% - 1170px) / 2) 120px 100px;
 }
 
 .contacts__right-bottom textarea {
@@ -712,11 +663,13 @@ section {
     border: none;
     border-bottom: #afafaf solid 3px;
     background-color: #e4e4e4;
-    padding: 15px 35px;
+    padding: 105px 30px 5px;
+    font-size: 18px;
+    line-height: 40px;
     color: #676767;
+    font-family: "Amble";
+    font-weight: 400;
     font-style: italic;
-    font-size: 1em;
-    margin-bottom: 40px;
     resize: none;
 }
 
@@ -736,6 +689,7 @@ section {
     color: #222222;
     font-family: "Amble";
     font-weight: 300;
+    font-style: italic;
     margin: 0;
 }
 
@@ -743,12 +697,22 @@ section {
     color: #222222;
     border: 3px solid #222222;
     font-size: 24px;
-    font-family: 'AmbleB';
+    font-family: 'Amble', sans-serif;
     width: 183px;
     height: 60px;
-    line-height: 60px;
+    font-weight: bold;
+    font-style: normal;
     letter-spacing: 1px;
     cursor: pointer;
+    margin-top: 40px;
+}
+
+.contacts__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 220px;
+    margin-top: 20px;
 }
 
 @media (max-width: 1220px) {
@@ -761,6 +725,21 @@ section {
 }
 
 @media (max-width: 1169px) {
+    .clients_grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .team {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .person {
+        margin: 15px auto;
+    }
+    .hiring {
+        margin: auto auto;
+    }
     .contacts {
         flex-wrap: wrap;
     }
@@ -776,13 +755,14 @@ section {
     .contacts__block h3 {
         text-align: center;
     }
+    .contacts__icons {
+        margin: 20px auto 0;
+    }
     .contacts__block p {
         margin: 0 auto;
     }
 }
 
-
-}
 .location {
     width: 34%;
     background: #F2F2F2;
@@ -791,18 +771,22 @@ section {
     justify-content: center;
     align-items: center;
 }
+
 .location_icons {
     margin: 20px 0;
     display: flex;
     justify-content: space-evenly;
 }
+
 .location_icons i {
     font-size: 1.4em;
 }
+
 .location h3,
 .location p {
     margin: 0 0 .5em;
 }
+
 .form-box {
     width: 66%;
     display: flex;
@@ -812,6 +796,7 @@ section {
     padding: 60px;
     background: #E4E4E4;
 }
+
 form {
     width: 100%;
     height: 100%;
@@ -820,36 +805,47 @@ form {
     justify-content: space-between;
     align-items: flex-end;
 }
+
 form div {
     width: 100%;
     display: flex;
 }
+
 form input {
     background: transparent;
     height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    color: #676767;
+    font-family: "Amble";
+    font-weight: 400;
     font-style: italic;
-    font-weight: bold;
     box-sizing: border-box;
-    padding: 6px 10px;
+    padding: 5px 30px;
     border: none;
     border-bottom: 3px solid #B3B3B3;
 }
+
 .email {
     width: calc(50% - 10px);
     margin-left: 20px;
 }
+
 .name {
     width: calc(50% - 10px)
 }
+
 .message {
     width: 100%;
 }
+
 form button.send {
     border-radius: 0;
     padding: 10px 30px;
     width: auto;
     margin: 0;
 }
+
 footer {
     width: 100%;
     height: 360px;
@@ -860,51 +856,38 @@ footer {
     justify-content: space-evenly;
     flex-flow: column;
 }
+
 @media (max-width: 962px) {
     section p {
-        width: 670px;
+        width: 650px;
     }
 }
+
 @media (max-width: 1168px) {
     .btn {
         max-width: 250px;
         font-size: 1.4em;
     }
-    
     .section .btn {
         font-size: 1.4em;
     }
-    
-    .team {
-        flex-flow: wrap;
-        justify-content: space-evenly;
-    }
-    
-    .member {
-        margin: 5px;
-    }
-    
     .work:nth-child(1),
     .work:nth-child(3),
     .work:nth-child(4),
     .work:nth-child(6) {
         margin: 5px 5px;
     }
-    
     .work {
         margin: 5px 5px;
     }
 }
 
-}
 @media (max-width: 1000px) {
-     :root {
-        --carousel-width: 640px;
-    }
     .our-location {
         font-size: .9em;
     }
 }
+
 @media (max-width: 750px) {
     section p {
         width: 570px;
@@ -913,7 +896,7 @@ footer {
         flex-flow: column;
     }
     .contacts__right-bottom textarea {
-        padding: 0;
+        width: 91%;
     }
     .name {
         width: 100%;
@@ -951,14 +934,19 @@ footer {
         font-size: 1.8em;
     }
 }
+
 @media (max-width: 640px) {
+    .clients_grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .contacts__right-bottom textarea {
+        width: 90%;
+    }
     .header-content p,
     section p {
         width: 470px;
         font-size: 18px;
-    }
-     :root {
-        --carousel-width: 320px;
     }
     h1,
     h2,
@@ -967,7 +955,12 @@ footer {
         font-size: 1.8em;
     }
 }
+
 @media (max-width: 560px) {
+    .team {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
     .contacts__right-top {
         flex-wrap: wrap;
         margin-bottom: 40px;
@@ -983,8 +976,16 @@ footer {
     section p {
         width: 370px;
     }
+    .contacts__right-bottom textarea {
+        width: 88%;
+    }
 }
+
 @media (max-width: 455px) {
+    .clients_grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
     nav button {
         left: 0;
     }
@@ -1017,5 +1018,21 @@ footer {
     h3,
     h4 {
         font-size: 1.5em;
+    }
+    .contacts__right-bottom textarea {
+        padding-right: 0;
+        width: 93%;
+    }
+}
+
+@media (max-width: 400px) {
+    .contacts__right-bottom textarea {
+        width: 92%;
+    }
+}
+
+@media (max-width:320px) {
+    .contacts__right-bottom textarea {
+        width: 89%;
     }
 }
