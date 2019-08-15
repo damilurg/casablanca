@@ -236,7 +236,10 @@ section {
 
 .video {
     background: url("../images/video_bg_image.jpg") no-repeat center center/cover;
-    filter: brightness(0.5);
+}
+
+#player {
+    opacity: 1;
 }
 
 .help {
