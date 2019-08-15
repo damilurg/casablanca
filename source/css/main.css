@@ -208,7 +208,7 @@ nav button .line {
     width: 40px;
     position: absolute;
     left: calc(50% - 20px);
-    bottom: 20px;
+    bottom: 50px;
 }
 
 .down_scroll .mouse {
