@@ -207,7 +207,7 @@ section {
 }
 
 .section {
-    height: 340px;
+    height: 420px;
     box-sizing: border-box;
     background-blend-mode: darken;
     display: flex;
@@ -227,10 +227,11 @@ section {
 .creativity {
     background: url("../images/creativity_bg_image.jpg") no-repeat center 55%/cover;
     filter: brightness(0.85);
+    height: 340px;
 }
 
 .quote {
-    background: url("../images/quote_bg_image.jpg") no-repeat center center/cover;
+    background: url("../images/quote_bg_image.jpg") no-repeat center 70%/cover;
 }
 
 .video {
