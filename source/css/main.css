@@ -499,7 +499,7 @@ nav button .line {
 /* video */
 
 .video {
-    background: url("../images/video_bg_image.jpg") no-repeat center center/cover;
+    background: rgba(0, 0, 0, 0.4) url("../images/video_bg_image.jpg") no-repeat center center/cover;
 }
 
 #player {
