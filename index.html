@@ -7,27 +7,31 @@
     <title>Casablanca</title>
     <link rel="stylesheet" href="source/css/main.css">
     <link rel="stylesheet" href="source/css/slick.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
 </head>
 
 <body>
+    <nav class="navigation">
+        <a href="#" class="menu-icon">
+            <i class="fa fa-bars"></i>
+        </a>
+        <ul class="main-navigation">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#creativity">Creativity</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#help">Help</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#why_choose">Why us?</a></li>
+            <li><a href="#quote">Quote</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <header>
-        <nav>
-            <button id="menu-button">
-                  <span class="line"></span>
-                  <span class="line"></span>
-                  <span class="line"></span>
-                </button>
-            <ul id="drawer">
-                <li><a href="#introduction" class="active-link">Introduction</a></li>
-                <li><a href="#work">Works</a></li>
-                <li><a href="#clients">Our clients</a></li>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#why_choose">Why choose us</a></li>
-                <li><a href="#contacts">Contacts us</a></li>
-            </ul>
-            <span class="click"></span>
-        </nav>
+
         <div class="header-content">
             <h1>We've got the talent</h1>
             <hr>
@@ -229,7 +233,7 @@
         <section class="section quote" id="quote">
             <a href="#" class="btn">Get a quote now.</a>
         </section>
-        <section class="sectionc" id="contacts">
+        <section class="sectionc" id="contact">
             <div class="container">
                 <h2>Get in touch</h2>
                 <hr>
@@ -279,6 +283,53 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="source/js/slick.min.js"></script>
     <script src="source/js/scripts.js"></script>
+    <script src="source/js/pagenav_scroll.js"></script>
+    <script>
+        // Menu initialization
+        var $menuIcon = $('.menu-icon'),
+            $navigation = $('.navigation'),
+            $mainNavigation = $('.main-navigation'),
+            $navigationLink = $('.main-navigation a');
+
+        $(window).scroll(function() {
+            if (window.scrollY > window.outerHeight) {
+                $menuIcon.addClass('active');
+            } else {
+                $menuIcon.removeClass('active');
+            }
+        });
+
+        $menuIcon.click(function(e) {
+            e.preventDefault();
+
+            $navigation.toggleClass('active');
+        });
+
+        $mainNavigation.singlePageNav({
+            filter: ':not(.external)',
+            speed: 1000,
+            currentClass: 'current',
+            easing: 'swing',
+            updateHash: false,
+            beforeStart: function() {},
+            onComplete: function() {
+                $navigation.removeClass('active');
+            }
+        });
+
+        // Scrollreveal initialize
+        var config = {
+
+            easing: 'hustle',
+            reset: false,
+            delay: 'onload',
+            opacity: .2,
+            vFactor: 0.2,
+            mobile: false
+        }
+
+        window.sr = new scrollReveal(config);
+    </script>
 </body>
 
 </html>
