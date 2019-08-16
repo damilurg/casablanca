@@ -196,7 +196,8 @@ header {
     bottom: 0;
     right: 0;
     margin: 0;
-    background: #222;
+    background: rgba(34, 34, 34, 0.3);
+    padding-top: 10px;
 }
 
 .navigation ul li {
