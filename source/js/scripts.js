@@ -94,7 +94,7 @@ function stopVideo() {
 const validateForm = () => {
     const inName = document.getElementById("name");
     const name = inName.value;
-    const nameRegExp = /^\s*([A-Za-z]{1,}([\.,] |[-']| ))+[A-Za-z]+\.?\s*$/;
+    const nameRegExp = /^\s*([A-Za-z]{1,}([\.,] |[-']|))+\.?\s*$/;
 
     const inEmail = document.getElementById("email");
     const email = inEmail.value;
