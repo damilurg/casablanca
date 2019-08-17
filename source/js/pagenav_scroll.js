@@ -187,3 +187,61 @@ if (typeof Object.create !== "function") {
         }, n = function() { r.blocked || (r.blocked = !0, r.scrolled = r.scrollY(), i(function() { r.animate() })) }, o = function(e, t) { for (var i in t) t.hasOwnProperty(i) && (e[i] = t[i]); return e }, i = function() { return e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || function(t) { e.setTimeout(t, 1e3 / 60) } }(), t
     }(window), scrollReveal
 });
+
+// Menu initialization
+var $menuIcon = $('.menu-icon'),
+    $navigation = $('.navigation'),
+    $mainNavigation = $('.main-navigation'),
+    $navigationLink = $('.main-navigation a');
+
+$(window).scroll(function() {
+    if (window.scrollY > window.outerHeight) {
+        $menuIcon.addClass('active');
+    } else {
+        $menuIcon.removeClass('active');
+    }
+});
+
+$menuIcon.click(function(e) {
+    e.preventDefault();
+
+    $navigation.toggleClass('active');
+});
+
+$mainNavigation.singlePageNav({
+    filter: ':not(.external)',
+    speed: 1000,
+    currentClass: 'current',
+    easing: 'swing',
+    updateHash: false,
+    beforeStart: function() {},
+    onComplete: function() {
+        $navigation.removeClass('active');
+    }
+});
+//closed menu on click
+$('body').click(function(e) {
+    $navigation.removeClass('active');
+});
+
+$navigation.click(function(e) {
+    e.stopPropagation();
+});
+//closed menu on ESC
+$navigation.keydown(function(e) {
+    // ESCAPE key pressed
+    if (e.keyCode == 27) {
+        $navigation.removeClass('active');
+    }
+});
+// Scrollreveal initialize
+var config = {
+    easing: 'hustle',
+    reset: true,
+    delay: 'onload',
+    opacity: .2,
+    vFactor: 0.2,
+    mobile: false
+}
+
+window.sr = new scrollReveal(config);
