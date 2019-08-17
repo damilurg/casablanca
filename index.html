@@ -43,7 +43,7 @@
         </div>
     </header>
     <main>
-        <section id="introduction">
+        <section data-sr id="introduction">
             <div class="container">
                 <h2>Introduction</h2>
                 <hr>
@@ -51,10 +51,10 @@
                 </p>
             </div>
         </section>
-        <section class="creativity section" id="creativity">
+        <section data-sr class="creativity section" id="creativity">
             <a href="#" class="btn">Pure Creativity.</a>
         </section>
-        <section id="work" id="work">
+        <section data-sr id="work" id="work">
             <div class="container">
                 <h2>Some of our work</h2>
                 <hr>
@@ -118,10 +118,10 @@
                 <a href="" class="btn">Show me more</a>
             </div>
         </section>
-        <section class="section help" id="help">
+        <section data-sr id="help" class="section help">
             <a href="#" class="btn">We're here to help.</a>
         </section>
-        <section id="clients">
+        <section data-sr id="clients">
             <div class="container">
                 <h2>Our clients</h2>
                 <hr>
@@ -144,7 +144,7 @@
                 </div>
             </div>
         </section>
-        <section id="about">
+        <section data-sr id="about">
             <div class="container">
                 <h2>About us</h2>
                 <hr>
@@ -183,11 +183,11 @@
                 </div>
             </div>
         </section>
-        <section class="section video" id="video">
+        <section data-sr id="video" class="section video">
             <a href="#"><img src="source/images/icons/play.png" alt="play me" onclick="videoPlay();return false;"></a>
             <div id="video"></div>
         </section>
-        <section id="why_choose">
+        <section data-sr id="why_choose">
             <div class="container">
                 <h2>Why choose us</h2>
                 <hr>
@@ -229,10 +229,10 @@
                 </div>
             </div>
         </section>
-        <section class="section quote" id="quote">
+        <section data-sr id="quote" class="section quote">
             <a href="#" class="btn">Get a quote now.</a>
         </section>
-        <section class="sectionc" id="contact">
+        <section data-sr id="contact" class="sectionc">
             <div class="container">
                 <h2>Get in touch</h2>
                 <hr>
@@ -283,66 +283,7 @@
     <script src="source/js/slick.min.js"></script>
     <script src="source/js/scripts.js"></script>
     <script src="source/js/pagenav_scroll.js"></script>
-    <script>
-        // Menu initialization
-        var $menuIcon = $('.menu-icon'),
-            $navigation = $('.navigation'),
-            $mainNavigation = $('.main-navigation'),
-            $navigationLink = $('.main-navigation a');
 
-        $(window).scroll(function() {
-            if (window.scrollY > window.outerHeight) {
-                $menuIcon.addClass('active');
-            } else {
-                $menuIcon.removeClass('active');
-            }
-        });
-
-        $menuIcon.click(function(e) {
-            e.preventDefault();
-
-            $navigation.toggleClass('active');
-        });
-
-        $mainNavigation.singlePageNav({
-            filter: ':not(.external)',
-            speed: 1000,
-            currentClass: 'current',
-            easing: 'swing',
-            updateHash: false,
-            beforeStart: function() {},
-            onComplete: function() {
-                $navigation.removeClass('active');
-            }
-        });
-        //closed menu on click
-        $('body').click(function(e) {
-            $navigation.removeClass('active');
-        });
-
-        $navigation.click(function(e) {
-            e.stopPropagation();
-        });
-        //closed menu on ESC
-        $navigation.keydown(function(e) {
-            // ESCAPE key pressed
-            if (e.keyCode == 27) {
-                $navigation.removeClass('active');
-            }
-        });
-        // Scrollreveal initialize
-        var config = {
-
-            easing: 'hustle',
-            reset: false,
-            delay: 'onload',
-            opacity: .2,
-            vFactor: 0.2,
-            mobile: false
-        }
-
-        window.sr = new scrollReveal(config);
-    </script>
 </body>
 
 </html>
