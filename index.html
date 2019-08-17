@@ -30,8 +30,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <header>
-
+    <header id="hero">
         <div class="header-content">
             <h1>We've got the talent</h1>
             <hr>
@@ -316,7 +315,21 @@
                 $navigation.removeClass('active');
             }
         });
+        //closed menu on click
+        $('body').click(function(e) {
+            $navigation.removeClass('active');
+        });
 
+        $navigation.click(function(e) {
+            e.stopPropagation();
+        });
+        //closed menu on ESC
+        $navigation.keydown(function(e) {
+            // ESCAPE key pressed
+            if (e.keyCode == 27) {
+                $navigation.removeClass('active');
+            }
+        });
         // Scrollreveal initialize
         var config = {
 
