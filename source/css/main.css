@@ -841,6 +841,9 @@
     }
     
     @media (max-width: 1169px) {
+        .navigation .menu-icon {
+            left: 110%;
+        }
         .clients_grid {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
