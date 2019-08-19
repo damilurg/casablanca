@@ -20,6 +20,10 @@
         font-style: normal;
     }
     
+    .huy {
+        margin: 0;
+    }
+    
     html {
         font-size: 16px;
     }
@@ -357,6 +361,10 @@
     .work:nth-child(3),
     .work:nth-child(6) {
         margin: 10px 0 10px 20px;
+    }
+    
+    .work .off {
+        margin: 0 auto!important;
     }
     
     .works_grid div.hidden {
@@ -887,14 +895,12 @@
         .section .btn {
             font-size: 1.4em;
         }
+        .work,
         .work:nth-child(1),
         .work:nth-child(3),
         .work:nth-child(4),
         .work:nth-child(6) {
-            margin: 5px 5px;
-        }
-        .work {
-            margin: 5px 5px;
+            margin: 10px 15px;
         }
     }
     
