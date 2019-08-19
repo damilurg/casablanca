@@ -1049,6 +1049,9 @@
         .contacts__right-bottom textarea {
             width: 92%;
         }
+        .slider p {
+            width: 300px;
+        }
     }
     
     @media (max-width:320px) {
@@ -1073,7 +1076,8 @@
             height: 70px;
         }
         .header-content p,
-        section p {
+        section p,
+        .slider p {
             width: 240px;
         }
     }
