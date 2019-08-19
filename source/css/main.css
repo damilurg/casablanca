@@ -171,6 +171,10 @@
         left: 100%;
     }
     
+    .navigation.active .fa-bars:before {
+        content: "\f00d";
+    }
+    
     .navigation {
         position: fixed;
         top: 0;
