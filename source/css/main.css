@@ -1000,6 +1000,9 @@
         .contacts__right-bottom textarea {
             width: 88%;
         }
+        .hiring {
+            margin: 20px auto;
+        }
     }
     
     @media (max-width: 455px) {
