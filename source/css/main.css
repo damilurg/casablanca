@@ -138,8 +138,8 @@
     .navigation .menu-icon {
         width: 30px;
         height: 30px;
-        top: 50px;
-        left: 100%;
+        top: 51px;
+        left: 125%;
         color: #ffffff;
         font-size: 1.875rem;
         line-height: 1em;
@@ -165,6 +165,10 @@
         -ms-transform: translateX(0);
         -o-transform: translateX(0);
         transform: translateX(0);
+    }
+    
+    .navigation.active .menu-icon {
+        left: 100%;
     }
     
     .navigation {
@@ -894,6 +898,9 @@
     }
     
     @media (max-width:768px) {
+        .navigation .menu-icon {
+            left: 105%;
+        }
         nav button {
             left: 20px;
         }
@@ -989,6 +996,9 @@
     }
     
     @media (max-width: 455px) {
+        .navigation .menu-icon {
+            left: 100%;
+        }
         .works_grid {
             margin-bottom: 40px;
         }
