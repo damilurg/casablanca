@@ -902,12 +902,12 @@
         section p {
             width: 650px;
         }
-    }
-    
-    @media (max-width:768px) {
         .navigation .menu-icon {
             left: 105%;
         }
+    }
+    
+    @media (max-width:768px) {
         nav button {
             left: 20px;
         }
