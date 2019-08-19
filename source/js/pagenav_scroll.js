@@ -100,6 +100,7 @@ if (typeof Object.create !== "function") {
 var $menuIcon = $('.menu-icon'),
     $navigation = $('.navigation'),
     $mainNavigation = $('.main-navigation'),
+    $mainMouse = $('.mouse'),
     $navigationLink = $('.main-navigation a');
 
 $(window).scroll(function() {
@@ -127,6 +128,7 @@ $mainNavigation.singlePageNav({
         $navigation.removeClass('active');
     }
 });
+
 //closed menu on click
 $('body').click(function(e) {
     $navigation.removeClass('active');
