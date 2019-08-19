@@ -135,3 +135,11 @@ const validateForm = () => {
 
 const btSubmit = document.getElementById("submit");
 btSubmit.addEventListener("click", validateForm);
+
+$('a[href^="#introduction"]').click(function() {
+    var target = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 800);
+    return false;
+});
